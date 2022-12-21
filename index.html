@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title> test </title>
+    <link href="styles.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+    
+ 
+<style>
+	
+	
+	body{
+    
+      background-image: url('https://www.bankrate.com/2022/07/07151503/Cryptocurrency-statistics.jpeg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+   
+    }
+    
+    p{
+    	text-align: center;
+  		color:white;
+    }
+    
+    form{
+    text-align: center;
+ 		color: white;
+    }
+    
+    h1, h2{
+    color: white;
+    text-align: center;
+    }
+    
+    .center{
+    	text-align:center;
+    	display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 15%;
+    }
+    
+</style>
+
+
+</head>
+<body>
+
+<h1>Set Realistic Expectations</h1>
+<h2>Website still in development</h2>
+
+<img src="https://media0.giphy.com/media/zlcIBNopQj8Yx5QgpR/giphy.gif?cid=6c09b95216a12428a4eadeb0aad255793b8cebc64dffd9f7&rid=giphy.gif&ct=s" class="center">
+
+
+<form>
+Total investment: <input type="text" id="firstNumber" /><br>
+Current Market Cap: <input type="text" id="secondNumber" /><br>
+Final Market Cap: <input type="text" id="thirdNumber" /><br>
+<input type="button" onClick="Investment()" Value="Invest for me" />
+</form>
+
+<p>Your investment is now worth: <br>
+<span id = "result"></span>
+</p>
+
+
+<script>
+
+
+function Investment(){
+	initial_investment = document.getElementById("firstNumber").value;
+	initial_market = document.getElementById("secondNumber").value; 
+    final_market = document.getElementById("thirdNumber").value;
+    
+document.getElementById("result").innerHTML = (final_market/initial_market) * initial_investment;
+
+}
+
+
+</script>
+
+
+</body>
+</html>
+
+
+
