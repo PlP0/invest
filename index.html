@@ -46,6 +46,13 @@
         width: 15%;
     }
     
+    .background{ 	
+    	margin-left: auto;
+        margin-right: auto;
+    	width: 50%;
+    	background-color: rgba(0,0,0,.75);
+    }
+    
 </style>
 
 
@@ -53,10 +60,12 @@
 <body>
 
 <h1>Set Realistic Expectations</h1>
-<h2>Website still in development</h2>
+
 
 <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ed5160fc-9b80-4c5c-a19f-05fb2b7ae75c/d7vjdnv-57735c63-8c9b-4b12-8155-0ba6ab373a29.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2VkNTE2MGZjLTliODAtNGM1Yy1hMTlmLTA1ZmIyYjdhZTc1Y1wvZDd2amRudi01NzczNWM2My04YzliLTRiMTItODE1NS0wYmE2YWIzNzNhMjkuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.NYkmEuyqjS4X652ak4efh6AjmWEckjS_NYkrFWQXm5c" class="center">
 
+
+<div class="background">
 
 <form>
 Initial investment: <input type="text" id="firstNumber" /><br>
@@ -64,6 +73,8 @@ Current Market Cap: <input type="text" id="secondNumber" /><br>
 Final Market Cap: <input type="text" id="thirdNumber" /><br>
 <input type="button" onClick="Investment()" Value="Invest for me" />
 </form>
+
+
 
 <p>Your investment is now worth: <br>
 <span id = "result"></span> <br>
@@ -74,6 +85,8 @@ Final Market Cap: <input type="text" id="thirdNumber" /><br>
 <p>Your money grew: <br>
 <span id="result3"></span> <br>
 </p>
+
+</div>
 
 <script>
 
