@@ -66,19 +66,38 @@ Final Market Cap: <input type="text" id="thirdNumber" /><br>
 </form>
 
 <p>Your investment is now worth: <br>
-<span id = "result"></span>
-</p>
+<span id = "result"></span> <br>
 
+<p>Your money multiplied: <br>
+<span id="result2"></span> <br>
+
+<p>Your money grew: <br>
+<span id="result3"></span> <br>
+</p>
 
 <script>
 
 
 function Investment(){
-	initial_investment = document.getElementById("firstNumber").value;
-	initial_market = document.getElementById("secondNumber").value; 
+	
+    initial_investment = document.getElementById("firstNumber").value;
+	
+    initial_market = document.getElementById("secondNumber").value; 
+    
     final_market = document.getElementById("thirdNumber").value;
     
+    difference = final_market/initial_market;
+	
+    final_investment = initial_investment * difference;
+    
+    percent =  ((final_investment - initial_investment)/initial_investment) * 100;
+
 document.getElementById("result").innerHTML = (final_market/initial_market) * initial_investment;
+
+document.getElementById("result2").innerHTML = difference + " times";
+
+document.getElementById("result3").innerHTML = percent + "%";
+
 
 }
 
@@ -88,6 +107,3 @@ document.getElementById("result").innerHTML = (final_market/initial_market) * in
 
 </body>
 </html>
-
-
-
