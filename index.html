@@ -68,6 +68,7 @@
 <div class="background">
 
 <form>
+Initial Price: <input type="text" id="price" /><br>
 Initial investment: <input type="text" id="firstNumber" /><br>
 Current Market Cap: <input type="text" id="secondNumber" /><br>
 Final Market Cap: <input type="text" id="thirdNumber" /><br>
@@ -84,7 +85,14 @@ Final Market Cap: <input type="text" id="thirdNumber" /><br>
 
 <p>Your money grew: <br>
 <span id="result3"></span> <br>
+
+<p> Each Coin is now worth: <br>
+<span id="result4"></span> <br>
+
 </p>
+
+	
+	
 
 	<p> 
 	Hello World - 
@@ -331,6 +339,7 @@ For the Aztecs it was cacao beans - It was Whale Teeth in Fiji - Yak Dung in Tib
 grains, metals, ivory, rare stones, leather, fish, if it had the 5 characteristics of comoddity money someone probably used it as currency 
 	</p>
 	
+	
 </div>
 
 
@@ -339,6 +348,8 @@ grains, metals, ivory, rare stones, leather, fish, if it had the 5 characteristi
 
 function Investment(){
 	
+    price_initial = document.getElementById("price").value; 
+    
     initial_investment = document.getElementById("firstNumber").value;
 	
     initial_market = document.getElementById("secondNumber").value; 
@@ -351,11 +362,15 @@ function Investment(){
     
     percent =  ((final_investment - initial_investment)/initial_investment) * 100;
 
+	price_final = price_initial * difference;
+
 document.getElementById("result").innerHTML = "$" + final_investment;
 
 document.getElementById("result2").innerHTML = difference + " times";
 
 document.getElementById("result3").innerHTML = percent + "%";
+
+document.getElementById("result4").innerHTML = "$" + price_final +" per coin"; 
 
 
 }
