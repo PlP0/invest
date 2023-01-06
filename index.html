@@ -90,10 +90,8 @@ Final Market Cap: <input type="text" id="thirdNumber" /><br>
 <span id="result4"></span> <br>
 
 </p>
-
 	
 	
-
 	<p> 
 	Hello World - 
 
@@ -340,6 +338,7 @@ grains, metals, ivory, rare stones, leather, fish, if it had the 5 characteristi
 	</p>
 	
 	
+	
 </div>
 
 
@@ -362,15 +361,24 @@ function Investment(){
     
     percent =  ((final_investment - initial_investment)/initial_investment) * 100;
 
-	price_final = price_initial * difference;
+	price_final =  price_initial * difference;
+	
+    n1 = final_investment.toFixed(2);
+    
+    n2 = difference.toFixed(2);
+    
+    n3 = percent.toFixed(2);
+    
+    n4 = price_final.toFixed(2);
 
-document.getElementById("result").innerHTML = "$" + final_investment;
 
-document.getElementById("result2").innerHTML = difference + " times";
+document.getElementById("result").innerHTML = "$" + n1;
 
-document.getElementById("result3").innerHTML = percent + "%";
+document.getElementById("result2").innerHTML = n2 + " times";
 
-document.getElementById("result4").innerHTML = "$" + price_final +" per coin"; 
+document.getElementById("result3").innerHTML = n3 + "%";
+
+document.getElementById("result4").innerHTML = "$" + n4 +" per coin"; 
 
 
 }
